@@ -75,4 +75,9 @@ Resolver.prototype.resolve = function(import_path, imported_from, callback) {
   );
 };
 
+Resolver.prototype.isBundled = () => {
+  if (typeof BUNDLE_VERSION === "undefined") return false;
+  return true;
+};
+
 module.exports = Resolver;
